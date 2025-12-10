@@ -1,4 +1,5 @@
 let Parser = require('rss-parser');
+var newsDataModel = require('../models/newsDataModel');
 var services = require('../services');
 var helper = require('../helper');
 var axios = require('axios');
@@ -119,8 +120,7 @@ var readRssAndSave = async (payload, callback) => {
           detailToSave,
           { upsert: true },
         );
-        console.log('saved-1');
-        result4callback.push(detailToSave);
+        result4callback.push(saveResult);
       }
       callback(null, result4callback);
     }
@@ -154,12 +154,13 @@ var readRssAndSave = async (payload, callback) => {
                   payload,
                   feed.title,
                 );
-                var saveResult = await services.newsService.asyncUpdate(
+                var saveResult = await newsDataModel.findOneAndUpdate(
                   { title: feed.items[i].title },
                   detailToSave,
                   { upsert: true },
                 );
-                result4callback.push(detailToSave);
+                delete saveResult['__v'];
+                result4callback.push(saveResult);
               }
               callback(null, result4callback);
               return;

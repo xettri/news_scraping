@@ -1,14 +1,14 @@
-.allSides/*crazydreamer*/ {
+.allSides {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
-.allSidesSoft/*crazydreamer*/ {
+.allSidesSoft {
   box-shadow: 0 3px 10px 0 rgba(115, 143, 147, 0.3);
 }
 
-.unselectable/*crazydreamer*/ {
+.unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -16,7 +16,7 @@
   -ms-user-select: none;
   user-select: none;
 }
-img/*crazydreamer*/ {
+img {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -50,4 +50,8 @@ CrazySpinner {
     width: calc(100% - 200px);
     margin-left: 200px !important;
   }
+}
+
+[onclick] {
+  cursor: pointer;
 }

@@ -18,7 +18,7 @@ var insert = function (criteria, callback) {
 
 //--------------------------------------------------------------------------------------------------------
 var update = function (criteria, details, options, callback) {
-  models.userModel.update(criteria, details, options, callback);
+  models.userModel.updateOne(criteria, details, options, callback);
 };
 //--------------------------------------------------------------------------------------------------------
 var findOne = function (criteria, projections, options, callback) {

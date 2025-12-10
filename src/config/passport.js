@@ -1,5 +1,5 @@
 var LocalStrategy = require('passport-local').Strategy;
-var Controller = require('../Controller');
+var Controller = require('../controller');
 
 module.exports = function (passport) {
   // used to serialize the user for the session

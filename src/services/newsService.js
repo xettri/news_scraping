@@ -42,7 +42,10 @@ var aggregation = function (query, callback) {
 };
 
 var asyncUpdate = function (criteria, details, options) {
-  return models.newsDataModel.update(criteria, details, options);
+  return models.newsDataModel.findOneAndUpdate(criteria, details, {
+    ...options,
+    new: true,
+  });
 };
 
 var asyncFindOne = function (criteria, projections, options) {

@@ -1,13 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
-var session = require('express-session');
-var bodyParser = require('body-parser');
 var helper = require('../helper');
-const controllers = require('../Controller');
-// var multer                = require('multer');
-var path = require('path');
-var fs = require('fs');
+const controllers = require('../controller');
 var weather = require('weather-js');
 var mongoose = require('mongoose');
 
@@ -135,7 +130,7 @@ router.post('/api/weatherInfo', function (req, res, next) {
   } else {
     loc = req.body.location;
   }
-  console.log('Location Detail--------------->', req.body);
+  console.log('User Location:', req.body);
   if (typeof loc === 'string' && loc.trim().length > 0) {
     loc = req.body.location;
   } else {

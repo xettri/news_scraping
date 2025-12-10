@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -37,7 +38,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // passport code
 require('./config/passport')(passport);
@@ -51,10 +52,10 @@ app.use('/', index);
 app.use('/admin', admin);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function (_, _, next) {
   var err = new Error('Not Found');
   err.status = 404;
-  console.log(err, '---1');
+  console.error(err);
   next(err);
 });
 
@@ -63,7 +64,7 @@ app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-  console.log(err, '---2');
+  console.error(err);
   // render the error page
   res.status(err.status || 500);
   res.render('Error');

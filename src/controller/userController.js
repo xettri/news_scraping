@@ -79,7 +79,6 @@ var saveNewsInUser = function (criteria, callback) {
             detailToSaveInUser,
             (err, response) => {
               if (err) {
-                console.log(err, '----Saved News Error');
                 callback('Unable to save please try after some time');
                 return;
               } else {

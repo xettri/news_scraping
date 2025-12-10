@@ -1,0 +1,53 @@
+.allSides/*crazydreamer*/ {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.allSidesSoft/*crazydreamer*/ {
+  box-shadow: 0 3px 10px 0 rgba(115, 143, 147, 0.3);
+}
+
+.unselectable/*crazydreamer*/ {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+img/*crazydreamer*/ {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+CrazySpinner {
+  display: none !important;
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.infinite-rotation {
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+@media (min-width: 767px) {
+  .side-nav-exist {
+    width: calc(100% - 200px);
+    margin-left: 200px !important;
+  }
+}

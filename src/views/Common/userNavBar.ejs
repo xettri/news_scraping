@@ -1,0 +1,114 @@
+<nav class="navbar navbar-inverse unselectable" id="top-nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">NEWS Scraper</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a class="nav-link" href="http://timesofindia.com" target="_blank">Times Of India</a></li>
+      <li><a class="nav-link" href="https://github.com/bcrazydreamer/news_scraping" target="_blank"><i class="fab fa-github"></i></a></li>
+    </ul>
+    <ul class="nav navbar-nav" style="float:right">
+        <% if(user.username) { %>
+          <li><a class="nav-link" href="#"><img src="/app_pics/bg/defaultuser.png" class="user-db-header" /></a></li>
+        <% } else { %>
+          <li><a class="nav-link" href="#"><p class="btn btn-default login-signup-btn" id="sign-in-btn">Sign In</p></a></li>
+          <li><a class="nav-link" href="#"><p class="btn btn-default login-signup-btn" id="sign-up-btn">Sign Up</p></a></li>
+        <% } %>
+    </ul>
+
+  </div>
+</nav>
+<div class="side-nav-main-div unselectable">
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+
+              <!--Top Image Slide-->
+              <div id="topSlideShow" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner sidenav_img_top">
+                  <div class="item active">
+                    <img src="/app_pics/bg/logo.png" alt="TOI">
+                  </div>
+                  <div class="item">
+                    <img src="/app_pics/bg/full-logo-ndtv.png" alt="NDTV">
+                  </div>
+                </div>
+              </div>
+              <!----------------->
+
+              <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <center>
+                    <a href="#">
+                      <strong class="clock-top">News</strong>
+                    </a>
+                  </center>
+                </li>
+
+                <li>
+                  <a href="/"><i class="fas fa-home"></i> Home</a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#main_feeds" class="collapsed">
+                  <a href="#"><i class="fas fa-newspaper"></i> Main Feeds
+                    <i class="fas fa-sort-down"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="main_feeds">
+                  <li><a href="#" data-id="/getNews/Top_Stories" class="feed-link">Top Stories</a></li>
+                  <li><a href="#" data-id="/getNews/Most_Recent_Stories" class="feed-link">Most Recent Stories</a></li>
+                  <li><a href="#" data-id="/getNews/India" class="feed-link">India</a></li>
+                  <li><a href="#" data-id="/getNews/World" class="feed-link">World</a></li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#world" class="collapsed">
+                  <a href="#"><i class="fas fa-newspaper"></i> World
+                    <i class="fas fa-sort-down"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="world">
+                  <li><a href="#" data-id="/getNews/US" class="feed-link">US</a></li>
+                  <li><a href="#" data-id="/getNews/NRI" class="feed-link">NRI</a></li>
+                  <li><a href="#" data-id="/getNews/South_Asia" class="feed-link">South Asia</a></li>
+                  <li><a href="#" data-id="/getNews/Chaina" class="feed-link">Chaina</a></li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#cities_feeds" class="collapsed">
+                  <a href="#"><i class="fas fa-newspaper"></i> Cities
+                    <i class="fas fa-sort-down"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="cities_feeds">
+
+                </ul>
+                <% if(!user.username) { %>
+                    <li>
+                        <a href="#" class="save-for-latter-css" id="sign-in-mobile">
+                          <i class="fas fa-user"></i> Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="save-for-latter-css" id="sign-up-mobile">
+                          <i class="fas fa-user-plus"></i> Sign Up
+                        </a>
+                    </li>
+                <% } %>
+                <li>
+                  <% if(user.username) { %>
+                    <a href="#" class="save-for-latter-css" id="save-for-later">
+                      <i class="far fa-bookmark"></i> Saved News
+                    </a>
+                  <% } %>
+                </li>
+                <li>
+                  <% if(user.username) { %>
+                    <a href="/logout" id="logoutbtnpresent">
+                      <i class="fas fa-sign-in-alt"></i> Logout
+                    </a>
+                  <% } %>
+                </li>
+
+
+            </ul>
+     </div>
+</div>
+
+<script type="text/javascript">
+  UpDateTimeInContainer('.clock-top');
+</script>

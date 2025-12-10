@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+Disallow: /admin/dashboard
+Disallow: /admin/addrss
+Disallow: /admin/editrss
+Disallow: /stylesheets/
+Disallow: /javascripts/

@@ -1,110 +1,105 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanssc.css);
-.news-main-container{
+.news-main-container {
   /* width:60% !important; */
 }
-.main-heading{
+.main-heading {
   font-family: 'Noto Sans SC', Helvetica, arial, sans-serif;
-  font-size:30px;
-  font-weight:600;
+  font-size: 30px;
+  font-weight: 600;
 }
 
-.news-main-div{
-  padding:10px;
-  border-radius:10px;
-  border:1px solid rgb(203, 203, 203);
-  margin-bottom:20px;
+.news-main-div {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(203, 203, 203);
+  margin-bottom: 20px;
 }
-.news-image{
+.news-image {
   height: 100px;
-  border-radius:10px;
-  box-shadow:0 3px 10px 0 rgba(115,143,147,.3);
-  margin-left:0 !important;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px 0 rgba(115, 143, 147, 0.3);
+  margin-left: 0 !important;
 }
-.news_description{
-  min-height:100px;
-  width:100%;
-  padding:0;
+.news_description {
+  min-height: 100px;
+  width: 100%;
+  padding: 0;
 }
-.news-title{
-  cursor:pointer;
-  padding:0;
-  color:rgb(68, 68, 68);
-  font-size:18px;
-  margin-bottom:0;
+.news-title {
+  cursor: pointer;
+  padding: 0;
+  color: rgb(68, 68, 68);
+  font-size: 18px;
+  margin-bottom: 0;
   font-family: 'Noto Sans SC', Helvetica, arial, sans-serif;
-  font-weight:600;
+  font-weight: 600;
   word-break: break-word;
   overflow-wrap: break-word;
 }
-.news-title:hover{
-  color:#931d21;
-  text-decoration:none;
+.news-title:hover {
+  color: #931d21;
+  text-decoration: none;
 }
-.news-publish-date{
-  padding:0;
-  font-family: "Times New Roman", Times, serif;
-  font-size:12px;
+.news-publish-date {
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
   color: #6e6e6e;
-  margin-top:0;
+  margin-top: 0;
 }
-.share-icon-div{
-  margin-top:15px;
-  padding:30px auto 10px auto;
+.share-icon-div {
+  margin-top: 15px;
+  padding: 30px auto 10px auto;
 }
-.share-icon{
-  color:#a1a1a1 !important;
-}
-
-.share-icon:hover{
-  color:#747474 !important;
+.share-icon {
+  color: #a1a1a1 !important;
 }
 
-.share-icon-pop-btn{
-  color:#c8c8c8 !important;
-}
-.share-icon-pop-btn{
-  color:#9e9b9b !important;
+.share-icon:hover {
+  color: #747474 !important;
 }
 
-
-
-
-.wether-news{
-  border:1px solid rgb(242, 242, 242);
-  border-radius:10px;
+.share-icon-pop-btn {
+  color: #c8c8c8 !important;
 }
-.weather-location{
+.share-icon-pop-btn {
+  color: #9e9b9b !important;
+}
+
+.wether-news {
+  border: 1px solid rgb(242, 242, 242);
+  border-radius: 10px;
+}
+.weather-location {
   font-family: 'Noto Sans SC', Helvetica, arial, sans-serif;
-  color:rgb(96, 100, 105);
-  padding-bottom:0;
+  color: rgb(96, 100, 105);
+  padding-bottom: 0;
 }
-.wether-outside{
+.wether-outside {
   font-family: 'Noto Sans SC', Helvetica, arial, sans-serif;
-  font-weight:600
+  font-weight: 600;
 }
-.temprature-info{
+.temprature-info {
   font-family: 'Noto Sans SC', Helvetica, arial, sans-serif;
   font-size: 2.8rem;
-  font-weight:500
+  font-weight: 500;
 }
-.forecast-date-day{
-
+.forecast-date-day {
 }
-.forecast-weather-icon{
-  height:40px;
+.forecast-weather-icon {
+  height: 40px;
 }
-.current-weather-icon{
-  height:80px;
+.current-weather-icon {
+  height: 80px;
 }
-.temprature-info-forecast-hight{
-  font-weight:600;
+.temprature-info-forecast-hight {
+  font-weight: 600;
 }
-.temprature-info-forecast-low{
-
+.temprature-info-forecast-low {
 }
 
-@media(max-width:768px){
-  .news-main-container{
-    width:auto !important;
+@media (max-width: 768px) {
+  .news-main-container {
+    width: auto !important;
   }
 }

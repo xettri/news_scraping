@@ -1,0 +1,79 @@
+<nav class="navbar navbar-inverse unselectable" id="top-nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">NEWS Scraper</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a class="nav-link" href="http://timesofindia.com" target="_blank">Times Of India</a></li>
+      <li><a class="nav-link" href="https://github.com/bcrazydreamer/news_scraping" target="_blank"><i class="fab fa-github"></i></a></li>
+    </ul>
+    <div class="navbar-header" style="float:right">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+  </div>
+</nav>
+
+
+<div class="side-nav-main-div unselectable">
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+
+          <!--Top Image Slide-->
+          <div id="topSlideShow" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner sidenav_img_top">
+              <div class="item active">
+                <img src="/app_pics/bg/logo.png" alt="TOI">
+              </div>
+              <div class="item">
+                <img src="/app_pics/bg/full-logo-ndtv.png" alt="NDTV">
+              </div>
+            </div>
+          </div>
+          <!----------------->
+
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <center>
+                    <a href="#">
+                      <strong class="clock-top">News</strong>
+                    </a>
+                  </center>
+                </li>
+
+
+                <li data-toggle="collapse" data-target="#setting" class="collapsed">
+                  <a href="#"><i class="fas fa-spider"></i> News Scrapping
+                    <i class="fas fa-sort-down"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="setting">
+                  <li><a href="/admin/addrss">Add New RSS</a></li>
+                  <li><a href="/admin/editrss">Edit RSS</a></li>
+                </ul>
+
+
+                 <!-- <li>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Profile
+                  </a>
+                  </li>
+
+                  <li>
+                   <a href="/admin/changepassword">
+                   <i class="fas fa-unlock-alt"></i> Change Password
+                   </a>
+                   </li> -->
+
+                   <li>
+                    <a href="/admin/logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                    </li>
+            </ul>
+     </div>
+</div>
+
+<script type="text/javascript">
+  UpDateTimeInContainer('.clock-top');
+</script>

@@ -4,24 +4,13 @@
  * Module dependencies.
  */
 
-var app = require('../app');
 var debug = require('debug')('login-passport:server');
 var http = require('http');
-var helper = require('../helper');
-
+var app = require('../src/app');
 
 // process.env.NODE_ENV='development';
 process.on('uncaughtException', function (err) {
-    console.log("Exception occur ",err);
-    /*var body = helper.AppConstant.MailBodyException();
-    var details = {};
-    details.username = 'adminmail@sitename.com';
-    details.subject  = 'Urgent mail server has Exception'
-    helper.MailSystem.sendingMail(details,(mailerr) =>{
-       if(err){
-         process.exit(1);
-       }
-     });*/
+  console.log('Exception occur ', err);
 });
 
 /**
@@ -40,7 +29,6 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 
 server.listen(port);
 server.on('error', onError);
@@ -75,9 +63,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  var bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
@@ -100,9 +86,7 @@ function onError(error) {
 
 function onListening() {
   var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  console.log('Server is started on ',bind);
+  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
+  console.log('Server is started on ', bind);
   debug('Listening on ' + bind);
 }
